@@ -248,7 +248,7 @@ typedef NS_ENUM(NSInteger, ATMessageCenterState) {
 
 	self.messageInputView.messageView.text = self.viewModel.draftMessage ?: @"";
 	self.messageInputView.messageView.textContainerInset = UIEdgeInsetsMake(TEXT_VIEW_VERTICAL_INSET, TEXT_VIEW_VERTICAL_INSET, TEXT_VIEW_VERTICAL_INSET, TEXT_VIEW_VERTICAL_INSET);
-	[self.messageInputView.clearButton setImage:[[ApptentiveUtilities imageNamed:@"at_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+	[self.messageInputView.clearButton setImage:[ApptentiveUtilities imageNamed:@"at_close"] forState:UIControlStateNormal];
 
 	self.messageInputView.placeholderLabel.text = self.viewModel.composerPlaceholderText;
 	self.messageInputView.placeholderLabel.textColor = [self.viewModel.styleSheet colorForStyle:ApptentiveColorTextInputPlaceholder];
@@ -258,6 +258,7 @@ typedef NS_ENUM(NSInteger, ATMessageCenterState) {
 	self.messageInputView.titleLabel.text = self.viewModel.composerTitle;
 	self.neuMessageButtonItem.title = self.viewModel.composerTitle;
 	[self.messageInputView.sendButton setTitle:self.viewModel.composerSendButtonTitle forState:UIControlStateNormal];
+    [self.messageInputView.sendButton setTintColor:[UIColor blackColor]];
 
 	self.messageInputView.sendButton.accessibilityHint = ApptentiveLocalizedString(@"Sends the message.", @"Accessibility hint for 'send' button");
 
