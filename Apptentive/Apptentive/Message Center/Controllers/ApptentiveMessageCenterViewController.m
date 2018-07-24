@@ -257,6 +257,7 @@ typedef NS_ENUM(NSInteger, ATMessageCenterState) {
 
 	self.messageInputView.titleLabel.text = self.viewModel.composerTitle;
 	self.neuMessageButtonItem.title = self.viewModel.composerTitle;
+    [self.neuMessageButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
 	[self.messageInputView.sendButton setTitle:self.viewModel.composerSendButtonTitle forState:UIControlStateNormal];
     [self.messageInputView.sendButton setTintColor:[UIColor blackColor]];
 
