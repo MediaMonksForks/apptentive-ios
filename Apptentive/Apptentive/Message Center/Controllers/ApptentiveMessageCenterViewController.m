@@ -314,6 +314,9 @@ typedef NS_ENUM(NSInteger, ATMessageCenterState) {
 		} else {
 			self.profileView.mode = ATMessageCenterProfileModeFull;
 		}
+        
+        [self.profileView.saveButton setTintColor:[UIColor blackColor]];
+        [self.profileView.skipButton setTintColor:[UIColor lightGrayColor]];
 	} else {
 		self.navigationItem.leftBarButtonItem = nil;
 	}
